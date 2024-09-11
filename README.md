@@ -21,10 +21,7 @@
     cd Python-SQL
     ```
 
-2. Install dependencies:
-    ```sh
-    pip install sqlite3
-    ```
+2. That's it.
 
 ## Usage
 1. Navigate to the main directory.

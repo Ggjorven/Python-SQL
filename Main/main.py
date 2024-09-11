@@ -1,4 +1,7 @@
 import sys
+import sqlite3
+
+s_DataBase = sqlite3.connect("TODO")
 
 def main(argv: list[str]):
     print("------------------------")
