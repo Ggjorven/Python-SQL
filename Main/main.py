@@ -1,7 +1,7 @@
 import sys
 import sqlite3
 
-s_DataBase = sqlite3.connect("TODO")
+s_DataBase = sqlite3.connect("FastFood.s3db")
 
 def main(argv: list[str]):
     print("------------------------")
