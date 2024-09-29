@@ -1,12 +1,15 @@
 import sys
 import sqlite3
 
-s_DataBase = sqlite3.connect("FastFood.s3db")
-
 def main(argv: list[str]):
-    print("------------------------")
-    print("Temporary main function.")
-    print("------------------------")
+    dataBase = sqlite3.connect("assets/FastFood.s3db")
+
+    cursor = dataBase.cursor()
+
+    for row in cursor.execute("select * from bestelling"):  
+        print(row)  
+  
+    dataBase.close()
 
 if __name__ == '__main__':
     main(sys.argv)
