@@ -24,18 +24,13 @@
 2. That's it.
 
 ## Usage
-1. Navigate to the main directory.
-    ``sh
-    cd Main
-    ``
-
-2. Run **main.py**.
+1. Run **main.py** from root directory !Important!.
     ```sh
-    python main.py
+    python Main/main.py
     ```
     or
     ```sh
-    python3 main.py
+    python3 Main/main.py
     ```
 
 ## License

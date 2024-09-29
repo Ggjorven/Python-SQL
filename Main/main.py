@@ -1,15 +1,17 @@
 import sys
-import sqlite3
+import random
+from typing import Any
+
+from BookDatabase import BookDatabase
 
 def main(argv: list[str]):
-    dataBase = sqlite3.connect("assets/FastFood.s3db")
+    books: BookDatabase = BookDatabase("Main/assets/books.db")
 
-    cursor = dataBase.cursor()
+    books.AddBook("Mysterious Death", "Mystery Author", "Thriller", 19.99, random.randint(1, 10000))
 
-    for row in cursor.execute("select * from bestelling"):  
-        print(row)  
-  
-    dataBase.close()
+    books: list[Any] = books.GetBooks()
+    for book in books:
+        print(f"Book found: {book}")
 
 if __name__ == '__main__':
     main(sys.argv)
