@@ -1,17 +1,22 @@
 import sys
-import random
 from typing import Any
 
+from PyQt5.QtWidgets import QApplication
+
 from BookDatabase import BookDatabase
+from BookStoreUI import BookStoreUI
 
 def main(argv: list[str]):
     books: BookDatabase = BookDatabase("Main/assets/books.db")
 
-    books.AddBook("Mysterious Death", "Mystery Author", "Thriller", 19.99, random.randint(1, 10000))
+    app = QApplication(argv)
 
-    books: list[Any] = books.GetBooks()
-    for book in books:
-        print(f"Book found: {book}")
+    # Create the main window
+    ui: BookStoreUI = BookStoreUI(books)
+    ui.show()
+
+    # Run the application
+    sys.exit(app.exec_())
 
 if __name__ == '__main__':
     main(sys.argv)

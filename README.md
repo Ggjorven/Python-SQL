@@ -21,7 +21,10 @@
     cd Python-SQL
     ```
 
-2. That's it.
+2. Install dependencies:
+    ```sh
+    pip install PyQt5
+    ```
 
 ## Usage
 1. Run **main.py** from root directory !Important!.
